@@ -3,6 +3,7 @@ package unleash
 import (
 	"fmt"
 
+	"net/http"
 	"net/url"
 	"strings"
 	"time"
@@ -164,6 +165,14 @@ func NewClient(options ...ConfigOption) (*Client, error) {
 		uc.options.instanceId = generateInstanceId()
 	}
 
+	headers := make(http.Header)
+	if uc.options.customHeaders != nil {
+		headers = uc.options.customHeaders
+	}
+	headers.Set("unleash-appname", uc.options.appName)
+	headers.Set("unleash-sdk", fmt.Sprintf("%s:%s", clientName, clientVersion))
+	headers.Set("unleash-connection-id", getConnectionId())
+
 	uc.repository = newRepository(
 		repositoryOptions{
 			backupPath:      uc.options.backupPath,
@@ -174,7 +183,7 @@ func NewClient(options ...ConfigOption) (*Client, error) {
 			refreshInterval: uc.options.refreshInterval,
 			storage:         uc.options.storage,
 			httpClient:      uc.options.httpClient,
-			customHeaders:   uc.options.customHeaders,
+			headers:         headers,
 		},
 		repositoryChannels{
 			errorChannels: errChannels,
@@ -197,7 +206,7 @@ func NewClient(options ...ConfigOption) (*Client, error) {
 			metricsInterval: uc.options.metricsInterval,
 			url:             *parsedUrl,
 			httpClient:      uc.options.httpClient,
-			customHeaders:   uc.options.customHeaders,
+			headers:         headers,
 			disableMetrics:  uc.options.disableMetrics,
 		},
 		metricsChannels{
