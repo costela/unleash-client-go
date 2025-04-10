@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        version: [1.13, 1.15, 1.16, 1.17, 1.18, 1.19, "1.20", 1.21, 1.22, 1.23, 1.24] 
+        version: [1.21, 1.22, 1.23, 1.24]
     steps:
       - uses: actions/checkout@v4
         name: Checkout code
@@ -31,8 +31,8 @@ jobs:
       - name: Run spec tests
         run: go test -v ./... -tags='norace'
       - name: Run all tests with race detection
-        timeout-minutes: 1
         run: go test -race -covermode atomic -coverprofile=profile.cov -v ./... -tags='!norace'
+        timeout-minutes: 1
       - name: Send coverage
         uses: shogo82148/actions-goveralls@v1
         with:
