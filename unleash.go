@@ -33,6 +33,10 @@ type RepositoryListener interface {
 	// OnReady is called when the client has loaded the feature toggles from
 	// the Unleash server.
 	OnReady()
+
+	// OnUpdate is called each time the client has loaded the features toggles from
+	// the Unleash server after the initial request.
+	OnUpdate()
 }
 
 // ImpressionListener defines an interface that can be implemented in order to receive
