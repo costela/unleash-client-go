@@ -2,10 +2,11 @@ package unleash_test
 
 import (
 	"fmt"
-	"github.com/Unleash/unleash-client-go/v4"
-	"github.com/Unleash/unleash-client-go/v4/context"
 	"strings"
 	"time"
+
+	"github.com/Unleash/unleash-go-sdk/v5"
+	"github.com/Unleash/unleash-go-sdk/v5/context"
 )
 
 type ActiveForUserWithEmailStrategy struct{}
@@ -43,7 +44,7 @@ func Example_customStrategy() {
 	unleash.Initialize(
 		unleash.WithListener(&unleash.DebugListener{}),
 		unleash.WithAppName("my-application"),
-		unleash.WithUrl("https://unleash.herokuapp.com/api/"),
+		unleash.WithUrl("https://eu.app.unleash-hosted.com/demo/api/"),
 		unleash.WithRefreshInterval(5*time.Second),
 		unleash.WithMetricsInterval(5*time.Second),
 		unleash.WithStrategies(&ActiveForUserWithEmailStrategy{}),

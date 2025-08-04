@@ -5,9 +5,9 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/Unleash/unleash-client-go/v4/api"
-	"github.com/Unleash/unleash-client-go/v4/context"
-	"github.com/Unleash/unleash-client-go/v4/strategy"
+	"github.com/Unleash/unleash-go-sdk/v5/api"
+	"github.com/Unleash/unleash-go-sdk/v5/context"
+	"github.com/Unleash/unleash-go-sdk/v5/strategy"
 )
 
 type configOption struct {

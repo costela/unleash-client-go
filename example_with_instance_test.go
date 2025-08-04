@@ -2,8 +2,9 @@ package unleash_test
 
 import (
 	"fmt"
-	"github.com/Unleash/unleash-client-go/v4"
 	"time"
+
+	"github.com/Unleash/unleash-go-sdk/v5"
 )
 
 // Sync runs the client event loop. All of the channels must be read to avoid blocking the
@@ -40,7 +41,7 @@ func Example_withInstance() {
 	// Create the client with the desired options
 	client, err := unleash.NewClient(
 		unleash.WithAppName("my-application"),
-		unleash.WithUrl("http://unleash.herokuapp.com/api/"),
+		unleash.WithUrl("https://eu.app.unleash-hosted.com/demo/api/"),
 	)
 
 	if err != nil {

@@ -8,11 +8,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Unleash/unleash-client-go/v4/api"
-	"github.com/Unleash/unleash-client-go/v4/context"
-	"github.com/Unleash/unleash-client-go/v4/internal/constraints"
-	s "github.com/Unleash/unleash-client-go/v4/internal/strategies"
-	"github.com/Unleash/unleash-client-go/v4/strategy"
+	"github.com/Unleash/unleash-go-sdk/v5/api"
+	"github.com/Unleash/unleash-go-sdk/v5/context"
+	"github.com/Unleash/unleash-go-sdk/v5/internal/constraints"
+	s "github.com/Unleash/unleash-go-sdk/v5/internal/strategies"
+	"github.com/Unleash/unleash-go-sdk/v5/strategy"
 )
 
 const (

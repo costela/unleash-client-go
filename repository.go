@@ -11,7 +11,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Unleash/unleash-client-go/v4/api"
+	"github.com/Unleash/unleash-go-sdk/v5/api"
 )
 
 var SEGMENT_CLIENT_SPEC_VERSION = "4.3.1"

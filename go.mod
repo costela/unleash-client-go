@@ -1,4 +1,4 @@
-module github.com/Unleash/unleash-client-go/v4
+module github.com/Unleash/unleash-go-sdk/v5
 
 go 1.21
 

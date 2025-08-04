@@ -2,9 +2,10 @@ package unleash_test
 
 import (
 	"fmt"
-	"github.com/Unleash/unleash-client-go/v4"
-	"github.com/Unleash/unleash-client-go/v4/context"
 	"time"
+
+	"github.com/Unleash/unleash-go-sdk/v5"
+	"github.com/Unleash/unleash-go-sdk/v5/context"
 )
 
 const MissingFeature = "does_not_exist"
@@ -14,7 +15,7 @@ func Example_fallbackFunc() {
 	unleash.Initialize(
 		unleash.WithListener(&unleash.DebugListener{}),
 		unleash.WithAppName("my-application"),
-		unleash.WithUrl("http://unleash.herokuapp.com/api/"),
+		unleash.WithUrl("https://eu.app.unleash-hosted.com/demo/api/"),
 	)
 
 	fallback := func(feature string, ctx *context.Context) bool {

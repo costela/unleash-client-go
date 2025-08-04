@@ -2,8 +2,9 @@ package unleash_test
 
 import (
 	"fmt"
-	"github.com/Unleash/unleash-client-go/v4"
 	"time"
+
+	"github.com/Unleash/unleash-go-sdk/v5"
 )
 
 const PropertyName = "eid.enabled"
@@ -13,7 +14,7 @@ func Example_simpleUsage() {
 	unleash.Initialize(
 		unleash.WithListener(&unleash.DebugListener{}),
 		unleash.WithAppName("my-application"),
-		unleash.WithUrl("http://unleash.herokuapp.com/api/"),
+		unleash.WithUrl("https://eu.app.unleash-hosted.com/demo/api/"),
 	)
 
 	timer := time.NewTimer(1 * time.Second)
