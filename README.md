@@ -1,5 +1,5 @@
 [![Build Status](https://github.com/Unleash/unleash-go-sdk/actions/workflows/build.yml/badge.svg)](https://github.com/Unleash/unleash-go-sdk/actions/workflows/build.yml) [![GoDoc](https://pkg.go.dev/badge/github.com/Unleash/unleash-go-sdk/v5?status.svg)](https://pkg.go.dev/github.com/Unleash/unleash-go-sdk/v5) [![Go Report Card](https://goreportcard.com/badge/github.com/Unleash/unleash-go-sdk)](https://goreportcard.com/report/github.com/Unleash/unleash-go-sdk)
-[![Coverage Status](https://coveralls.io/repos/github/Unleash/unleash-go-sdk/badge.svg?branch=v4)](https://coveralls.io/github/Unleash/unleash-go-sdk?branch=v4)
+[![Coverage Status](https://coveralls.io/repos/github/Unleash/unleash-go-sdk/badge.svg?branch=v5)](https://coveralls.io/github/Unleash/unleash-go-sdk?branch=v5)
 
 # unleash-go-sdk
 
@@ -218,7 +218,7 @@ unleash.IsEnabled("someToggle", unleash.WithContext(ctx))
 
 ### Caveat
 
-This client uses go routines to report several events and doesn't drain the channel by default. So you need to either register a listener using `WithListener` or drain the channel "manually" (demonstrated in [this example](https://github.com/Unleash/unleash-go-sdk/blob/v4/example_with_instance_test.go)).
+This client uses go routines to report several events and doesn't drain the channel by default. So you need to either register a listener using `WithListener` or drain the channel "manually" (demonstrated in [this example](https://github.com/Unleash/unleash-go-sdk/blob/v5/example_with_instance_test.go)).
 
 ### Feature Resolver
 
