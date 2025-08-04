@@ -1,7 +1,7 @@
-[![Build Status](https://github.com/Unleash/unleash-go-sdk/actions/workflows/build.yml/badge.svg)](https://github.com/Unleash/unleash-go-sdk/actions/workflows/build.yml) [![GoDoc](https://pkg.go.dev/badge/github.com/Unleash/unleash-go-sdk/v5?status.svg)](https://pkg.go.dev/github.com/Unleash/unleash-go-sdk/v5) [![Go Report Card](https://goreportcard.com/badge/github.com/Unleash/unleash-client-go)](https://goreportcard.com/report/github.com/Unleash/unleash-client-go)
-[![Coverage Status](https://coveralls.io/repos/github/Unleash/unleash-client-go/badge.svg?branch=v4)](https://coveralls.io/github/Unleash/unleash-client-go?branch=v4)
+[![Build Status](https://github.com/Unleash/unleash-go-sdk/actions/workflows/build.yml/badge.svg)](https://github.com/Unleash/unleash-go-sdk/actions/workflows/build.yml) [![GoDoc](https://pkg.go.dev/badge/github.com/Unleash/unleash-go-sdk/v5?status.svg)](https://pkg.go.dev/github.com/Unleash/unleash-go-sdk/v5) [![Go Report Card](https://goreportcard.com/badge/github.com/Unleash/unleash-go-sdk)](https://goreportcard.com/report/github.com/Unleash/unleash-go-sdk)
+[![Coverage Status](https://coveralls.io/repos/github/Unleash/unleash-go-sdk/badge.svg?branch=v4)](https://coveralls.io/github/Unleash/unleash-go-sdk?branch=v4)
 
-# unleash-client-go
+# unleash-go-sdk
 
 Unleash Client for Go. Read more about the [Unleash project](https://github.com/Unleash/unleash)
 
@@ -20,7 +20,7 @@ The client may work on older versions of Go as well, but is not actively tested.
 
 ## Getting started
 
-### 1. Install unleash-client-go
+### 1. Install unleash-go-sdk
 
 To install the latest version of the client use:
 
@@ -289,11 +289,11 @@ func main() {
 
 ## Development
 
-To override dependency on unleash-client-go github repository to a local development folder (for instance when building a local test-app for the SDK),
+To override dependency on unleash-go-sdk github repository to a local development folder (for instance when building a local test-app for the SDK),
 you can add the following to your apps `go.mod`:
 
 ```mod
-    replace github.com/Unleash/unleash-go-sdk/v5 => ../unleash-client-go/
+    replace github.com/Unleash/unleash-go-sdk/v5 => ../unleash-go-sdk/
 ```
 
 
