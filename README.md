@@ -1,11 +1,11 @@
-[![Build Status](https://github.com/Unleash/unleash-go-sdk/actions/workflows/build.yml/badge.svg)](https://github.com/Unleash/unleash-go-sdk/actions/workflows/build.yml) [![GoDoc](https://pkg.go.dev/badge/github.com/Unleash/unleash-go-sdk/v5?status.svg)](https://pkg.go.dev/github.com/Unleash/unleash-go-sdk/v5) [![Go Report Card](https://goreportcard.com/badge/github.com/Unleash/unleash-go-sdk)](https://goreportcard.com/report/github.com/Unleash/unleash-go-sdk)
+[![Build Status](https://github.com/Unleash/unleash-go-sdk/actions/workflows/build.yml/badge.svg)](https://github.com/Unleash/unleash-go-sdk/actions/workflows/build.yml) [![GoDoc](https://pkg.go.dev/badge/github.com/Unleash/unleash-go-sdk/v5?status.svg)](https://pkg.go.dev/github.com/Unleash/unleash-go-sdk/v5) [![Go Report Card](https://goreportcard.com/badge/github.com/Unleash/unleash-go-sdk/v5)](https://goreportcard.com/report/github.com/Unleash/unleash-go-sdk/v5)
 [![Coverage Status](https://coveralls.io/repos/github/Unleash/unleash-go-sdk/badge.svg?branch=v5)](https://coveralls.io/github/Unleash/unleash-go-sdk?branch=v5)
 
 # unleash-go-sdk
 
 Unleash Client for Go. Read more about the [Unleash project](https://github.com/Unleash/unleash)
 
-**Version 5 of the client changed the module name from `github.com/Unleash/unleash-client-go/v4` to `github.com/Unleash/unleash-go-sdk/v5`. Other than the module name change it should be a drop-in replacement for the previous version.** If you're using the v4 branch, consider migrating to v5 as soon as possible.
+**Version 5 of the client changed the module name from `github.com/Unleash/unleash-client-go/v4` to `github.com/Unleash/unleash-go-sdk/v5`. Other than the module name change, it should be a drop-in replacement for the previous version.** If you're using the v4 branch, consider migrating to v5 as soon as possible.
 
 Unleash is a private, secure, and scalable [feature management platform](https://www.getunleash.io/) built to reduce the risk of releasing new features and accelerate software development. This Backend Go SDK is designed to help you integrate with Unleash and evaluate feature flags inside your application.
 
