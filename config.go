@@ -266,5 +266,4 @@ type metricsOptions struct {
 	disableMetrics  bool
 	httpClient      *http.Client
 	headers         http.Header
-	started         *time.Time
 }
