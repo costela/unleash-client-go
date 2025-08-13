@@ -21,7 +21,7 @@ type configOption struct {
 	disableMetrics  bool
 	backupPath      string
 	strategies      []strategy.Strategy
-	listener        interface{}
+	listener        any
 	storage         Storage
 	httpClient      *http.Client
 	customHeaders   http.Header
@@ -34,7 +34,7 @@ type ConfigOption func(*configOption)
 // the listener interfaces. If no listener is registered then the user is responsible
 // for draining the various channels on the client. Failure to do so will stop the client
 // from working as the worker routines will be blocked.
-func WithListener(listener interface{}) ConfigOption {
+func WithListener(listener any) ConfigOption {
 	return func(o *configOption) {
 		o.listener = listener
 	}
